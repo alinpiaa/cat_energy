@@ -1,0 +1,58 @@
+.demo__summary-list {
+    .reset-list();
+}
+
+.demo__text {
+    .plain-text();
+}
+
+.demo__summary-value {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.demo__summary-parameter {
+    .plain-text();
+
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+}
+
+.demo__summary-item_nutrition {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    .demo__summary-value {
+        font-size: inherit;
+        line-height: inherit;
+        text-transform: inherit;
+    }
+
+    .demo__summary-parameter {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-transform: inherit;
+    }
+}
+
+@media (min-width: @tablet) {
+    .demo__summary-value {
+        font-size: 30px;
+        line-height: 37px;
+    }
+
+    .demo__summary-parameter {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .demo__summary-item_nutrition {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

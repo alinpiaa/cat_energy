@@ -1,0 +1,23 @@
+.products {
+    background-color: @brand;
+    color: @text-white;
+}
+
+.products__promo-text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+
+@media (min-width: @tablet) {
+    .products {
+        background-color: transparent;
+        color: @text-main;
+    }
+
+    .products__promo-text {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}

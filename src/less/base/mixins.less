@@ -1,0 +1,88 @@
+.main-title {
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 36px;
+    text-align: center;
+
+    @media (min-width: @tablet) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+.button-style {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: @text-main;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    padding: 11px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    @media (min-width: @tablet) {
+        display: inline-block;
+        font-size: 20px;
+        line-height: 20px;
+        padding: 16px 28px 16px 26px;
+        width: auto;
+    }
+}
+
+.button-brand-style {
+    background-color: @brand-button-color;
+    color: @text-white;
+
+    &:hover {
+        background-color: @brand-button-hover-color;
+    }
+
+    &:active {
+        background-color: @brand-button-active-color;
+
+        span {
+            opacity: @button-text-active-opacity;
+        }
+    }
+}
+
+.button-gray-style {
+    background-color: @gray-button-color;
+
+    &:hover {
+        background-color: @gray-button-hover-color;
+    }
+
+    &:active {
+        background-color: @gray-button-active-color;
+
+        span {
+            opacity: @button-text-active-opacity;
+        }
+    }
+}
+
+.plain-text {
+    color: @text-dark;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+
+    @media (min-width: @tablet) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.reset-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

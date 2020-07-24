@@ -1,0 +1,33 @@
+.menu__item {
+    .reset-list();
+}
+
+.menu__link {
+    color: @text-main;
+    font-family: 'Oswald-Medium', 'Arial', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media (min-width: @tablet) {
+    .menu__link {
+        font-family: 'Oswald-Regular', 'Arial', sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+@media (min-width: @desktop) {
+    .menu {
+        background-color: @brand;
+        color: @text-white;
+    }
+
+    .menu__link {
+        color: inherit;
+        font-size: 20px;
+        line-height: 25px;
+    }
+}

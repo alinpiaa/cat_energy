@@ -1,0 +1,19 @@
+.footer__copyright-link {
+    .plain-text();
+
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+
+    &:focus,
+    &:active {
+        opacity: @button-text-active-opacity;
+    }
+}
+
+@media (min-width: @tablet) {
+    .footer__copyright-link {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
