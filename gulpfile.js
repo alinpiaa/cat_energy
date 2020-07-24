@@ -101,8 +101,8 @@ function fonts() {
         .pipe(dest('build'));
 }
 
-function clean(done) {
-    del('build');
+async function clean(done) {
+    await del('build');
 
     done();
 }
@@ -138,4 +138,5 @@ const start = series(build, serve);
 
 exports.clean = clean;
 exports.build = build;
+exports.serve = serve;
 exports.start = start;
