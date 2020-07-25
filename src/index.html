@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body class="body no-js">
-        <script src="js/script.min.js"></script>
+        <div style="display: none;">
+            <include src="./build/img/sprite.svg"></include>
+        </div>
         <header class="header">
             <div class="header__inner">
                 <nav class="header__menu menu menu_no-js">
@@ -68,7 +70,6 @@
                         <p class="programs__item-text">
                             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
                         </p>
-                        <a class="programs__item-link" href="#">
                             Каталог Slim
                         </a>
                     </li>
@@ -164,49 +165,63 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
-            <section class="footer__contacts contacts">
-                <h2 class="contacts__title section-title visually-hidden">
-                    Контакты и расположение
-                </h2>
-                <div class="contacts__text">
-                    <b class="contacts__become-partner-text">
-                        Приглашаем к сотрудничеству дилеров!
-                    </b>
-                    <p class="contacts__address">
-                        ул. Большая<br> Конюшенная, д. 19/8<br>Санкт-Петербург
-                    </p>
-                </div>
-                <div id="map" class="contacts__map contacts__map_js contacts__map_hidden"></div>
-                <div class="contacts__map contacts__map_no-js">
-                    <img src="." alt="Магазин по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
-                </div>
-            </section>
-            <h2 class="footer__title">
-                Cat energy
+        <section class="contacts">
+            <h2 class="contacts__title section-title visually-hidden">
+                Контакты и расположение
             </h2>
-            <ul class="footer__social-list">
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link_vk" href="#" aria-label="ВКонтакте">
-
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link_instagram" href="#" aria-label="Instagram">
-                        
-                    </a>
-                </li>
-                <li class="footer__social-facebook">
-                    <a class="footer__social-link footer__social-link_facebook" href="#" aria-label="Facebook">
-                        
-                    </a>
-                </li>
-            </ul>
-            <div class="footer__copyright">
-                <a href="#" class="footer__copyright-link">
-                    HTML Academy
-                </a>
+            <div class="contacts__text">
+                <b class="contacts__become-partner-text">
+                    Приглашаем к сотрудничеству дилеров!
+                </b>
+                <p class="contacts__address">
+                    ул. Большая<br> Конюшенная, д. 19/8<br>Санкт-Петербург
+                </p>
             </div>
-        </footer>    
+            <div id="map" class="contacts__map contacts__map_js contacts__map_hidden"></div>
+            <div class="contacts__map contacts__map_no-js">
+                <img src="." alt="Магазин по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__inner">
+                <a class="footer__logo-link" href="#">
+                    <svg class="footer__logo-icon" width="128" height="24">
+                        <use xlink:href="#footer-logo"></use>
+                    </svg>
+                </a>            
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link_vk" href="#" aria-label="ВКонтакте">
+                            <svg class="footer__social-icon footer__social-icon_vk" width="22" height="12">
+                                <use xlink:href="#m-vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link_instagram" href="#" aria-label="Instagram">
+                            <svg class="footer__social-icon" width="16" height="16">
+                                <use xlink:href="#m-insta"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-facebook">
+                        <a class="footer__social-link footer__social-link_facebook" href="#" aria-label="Facebook">
+                            <svg class="footer__social-icon" width="10" height="19">
+                                <use xlink:href="#m-fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copyright">
+                    <a href="#" class="footer__copyright-link">
+                        <span>HTML Academy</span>
+                        <svg class="footer__copyright-icon" width="27" height="34">
+                            <use xlink:href="#htmlacademy"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/script.min.js"></script> 
     </body>
 </html>

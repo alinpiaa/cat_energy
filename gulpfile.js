@@ -83,7 +83,7 @@ function toWebp() {
 }
 
 function svgSprite() {
-    return src('src/img/icon-*.svg')
+    return src('src/img/*.svg')
         .pipe(imagemin([
             imagemin.svgo()
         ]))
@@ -129,8 +129,7 @@ function serve() {
     watch('src/js/**/*.js', series(js, refresh));
     watch('src/fonts/**/*.{woff,woff2}', series(fonts, refresh));
     watch('src/img/**/*.{png,jpg}', series(images, toWebp, refresh));
-    watch('src/img/**/*.svg', series(images, refresh));
-    watch('src/img/**/icon-*.svg', series(svgSprite, html, refresh));
+    watch('src/img/**/*.svg', series(images, svgSprite, html, refresh));
 }
 
 const build = series(clean, svgSprite, html, parallel(css, js, fonts, images, toWebp));
