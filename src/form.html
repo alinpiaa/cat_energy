@@ -9,31 +9,45 @@
         <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body class="body no-js">
-        <script src="js/script.min.js"></script>
+        <div style="display: none;">
+            <include src="./build/img/sprite.svg"></include>
+        </div>
         <header class="header">
             <div class="header__inner">
                 <nav class="header__menu menu menu_no-js">
                     <div class="header__menu-item">
-                        <a class="header__logo logo">
+                        <a class="header__logo-link" href="index.html">
                             <picture>
-                                <img class="logo__image" src="img/logo-mobile.svg" alt="Cat energy.">
+                                <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+                                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                                <img class="header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Cat energy.">
                             </picture>
+                            <svg class="header__logo-text header__logo-text_mobile" width="101" height="18">
+                                <use xlink:href="#logo-mobile-header"></use>
+                            </svg>
                         </a>
-                        <button class="menu__btn" type="button" aria-label="Открыть или закрыть меню"></button>
+                        <button class="menu__btn" type="button" aria-label="Открыть или закрыть меню">
+                            <svg class="header__logo-text header__logo-text_mobile" width="18" height="18">
+                                <use xlink:href="#m-close"></use>
+                            </svg>
+                            <svg class="header__logo-text header__logo-text_mobile visually-hidden" width="24" height="18">
+                                <use xlink:href="#mobile-menu"></use>
+                            </svg>
+                        </button>
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link" href="#">
+                            <a class="menu__link" href="index.html">
                                 <span class="menu__link-text">Главная</span>
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">
+                            <a class="menu__link" href="catalog.html">
                                 <span class="menu__link-text">Каталог продукции</span>
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">
+                            <a class="menu__link menu__link_current" href="#">
                                 <span class="menu__link-text">Подбор программы</span>
                             </a>
                         </li>
@@ -126,48 +140,45 @@
             </section>
         </main>
         <footer class="footer">
-            <section class="footer__contacts contacts">
-                <h2 class="contacts__title section-title visually-hidden">
-                    Контакты и расположение
-                </h2>
-                <div class="contacts__text">
-                    <b class="contacts__become-partner-text">
-                        Приглашаем к сотрудничеству дилеров!
-                    </b>
-                    <p class="contacts__address">
-                        ул. Большая<br> Конюшенная, д. 19/8<br>Санкт-Петербург
-                    </p>
+            <div class="footer__inner">
+                <a class="footer__logo-link" href="#">
+                    <svg class="footer__logo-icon" width="128" height="24">
+                        <use xlink:href="#footer-logo"></use>
+                    </svg>
+                </a>            
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link_vk" href="#" aria-label="ВКонтакте">
+                            <svg class="footer__social-icon footer__social-icon_vk" width="22" height="12">
+                                <use xlink:href="#m-vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a class="footer__social-link footer__social-link_instagram" href="#" aria-label="Instagram">
+                            <svg class="footer__social-icon footer__social-icon_instagram" width="16" height="16">
+                                <use xlink:href="#m-insta"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__social-facebook">
+                        <a class="footer__social-link footer__social-link_facebook" href="#" aria-label="Facebook">
+                            <svg class="footer__social-icon footer__social-icon_facebook" width="10" height="19">
+                                <use xlink:href="#m-fb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__copyright">
+                    <a href="#" class="footer__copyright-link">
+                        <span>HTML Academy</span>
+                        <svg class="footer__copyright-icon" width="27" height="34">
+                            <use xlink:href="#htmlacademy"></use>
+                        </svg>
+                    </a>
                 </div>
-                <div id="map" class="contacts__map contacts__map_js contacts__map_hidden"></div>
-                <div class="contacts__map contacts__map_no-js">
-                    <img src="." alt="Магазин по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург.">
-                </div>
-            </section>
-            <h2 class="footer__title">
-                Cat energy
-            </h2>
-            <ul class="footer__social-list">
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link_vk" href="#" aria-label="ВКонтакте">
-
-                    </a>
-                </li>
-                <li class="footer__social-item">
-                    <a class="footer__social-link footer__social-link_instagram" href="#" aria-label="Instagram">
-                        
-                    </a>
-                </li>
-                <li class="footer__social-facebook">
-                    <a class="footer__social-link footer__social-link_facebook" href="#" aria-label="Facebook">
-                        
-                    </a>
-                </li>
-            </ul>
-            <div class="footer__copyright">
-                <a href="#" class="footer__copyright-link">
-                    HTML Academy
-                </a>
             </div>
         </footer>
+        <script src="js/script.min.js"></script>
     </body>
 </html>
