@@ -56,21 +56,49 @@
     .products {
         background-color: transparent;
         color: @text-main;
+        height: auto;
+        margin-top: 53px;
+    }
+
+    .products__main-block {
+        background-color: transparent;
+        background-image: none;
+        color: @text-main;
+        height: auto;
+        padding: 0 0 0 120px;
+    }
+
+    .products__bottom-inner {
+        left: 0;
+        margin: 21px 0 0 0;
+        padding: 0;
+        position: relative;
     }
 
     .products__title {
+        margin-bottom: 44px;
         text-align: left;
     }
 
     .products__promo-text {
         font-size: 20px;
         line-height: 20px;
+        text-align: left;
     }
 
     .products__link {
         font-size: 20px;
+        left: 120px;
         line-height: 20px;
         padding-bottom: 16px;
         padding-top: 16px;
+        position: absolute;
+        top: 28px;
+    }
+
+    .products__promo-image {
+        left: 50%;
+        margin-left: -354px;
+        position: relative;
     }
 }
