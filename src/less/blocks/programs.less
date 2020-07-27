@@ -167,3 +167,52 @@
         padding-bottom: 59px;
     }
 }
+
+@media (min-width: @desktop) {
+    .programs__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .programs__item-header {
+        justify-content: center;
+        position: relative;
+    }
+
+    .programs__item {
+        box-sizing: border-box;
+        padding: 79px 53px 61px 51px;
+        width: 570px;
+
+        &:not(:last-of-type) {
+            margin: 0;
+        }
+    }
+
+    .programs__item-text {
+        padding-bottom: 31px;
+        padding-top: 73px;
+    }
+
+    .programs__icon-wrapper {
+        height: 100px;
+        left: 0;
+        margin-top: -50px;
+        top: 50%;
+        width: 100px;
+    }
+
+    .programs__icon_slim {
+        height: 97px;
+        margin-left: -36px;
+        top: -6px;
+        width: 70px;
+    }
+
+    .programs__icon_pro {
+        height: 56px;
+        margin-left: -68px;
+        margin-top: -28px;
+        width: 134px;
+    }
+}
