@@ -114,13 +114,56 @@
 }
 
 @media (min-width: @tablet) {
+    .programs {
+        margin-top: -5px;
+    }
+
+    .programs__item {
+        padding: 80px 316px 62px 52px;
+        position: relative;
+
+        &:not(:last-of-type) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .programs__icon-wrapper {
+        height: 200px;
+        margin-top: -92px;
+        position: absolute;
+        right: 62px;
+        top: 50%;
+        width: 200px;
+    }
+
+    .programs__icon_slim {
+        height: 194px;
+        margin-left: -70px;
+        top: -10px;
+        width: 140px;
+    }
+
+    .programs__icon_pro {
+        height: 112px;
+        margin-left: -134px;
+        margin-top: -56px;
+        width: 268px;
+    }
+
     .programs__item-title {
         font-size: 36px;
         line-height: 37px;
+        margin: 0;
     }
 
     .programs__item-link {
         font-size: 20px;
         line-height: 20px;
+        margin-top: 0;
+    }
+
+    .programs__item-text {
+        border-bottom: none;
+        padding-bottom: 59px;
     }
 }
