@@ -1,7 +1,67 @@
+.flow {
+    .inner();
+
+    margin-top: 29px;
+}
+
+.flow__title {
+    margin: 0 0 41px 0;
+}
+
+.flow__item {
+    align-items: center;
+    display: flex;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+
 .flow__list {
     .reset-list();
 }
 
+.flow__item-icon {
+    background-color: @brand;
+    color: @text-white;
+    flex-shrink: 0;
+    height: 60px;
+    position: relative;
+    width: 60px;
+
+    &::after {
+        background-position: center center;
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        height: 50px;
+        left: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+        position: absolute;
+        top: 50%;
+        width: 50px;
+    }
+}
+
+.flow__item-icon_leaf::after {
+    background-image: url('../img/advantage-1.png');
+}
+
+.flow__item-icon_powder::after {
+    background-image: url('../img/advantage-2.png');
+}
+
+.flow__item-icon_cutlery::after {
+    background-image: url('../img/advantage-3.png');
+}
+
+.flow__item-icon_clock::after {
+    background-image: url('../img/advantage-4.png');
+}
+
 .flow__item-text {
     .plain-text();
+
+    margin: 0 0 0 20px;
 }
