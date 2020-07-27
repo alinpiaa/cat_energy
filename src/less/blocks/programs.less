@@ -1,24 +1,116 @@
+@card-inner-separator-color: #d9d9d9;
+
+.programs {
+    .inner();
+
+    margin-top: 22px;
+}
+
 .programs__list {
     .reset-list();
+}
+
+.programs__item {
+    background-color: @gray-lightest;
+    padding: 23px 20px;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+
+.programs__item-header {
+    align-items: center;
+    display: flex;
+}
+
+.programs__icon-wrapper {
+    background-color: @brand;
+    border-radius: 50%;
+    height: 50px;
+    position: relative;
+    width: 50px;
+}
+
+.programs__icon {
+    position: absolute;
+}
+
+.programs__icon_slim {
+    left: 50%;
+    margin-left: -17.5px;
+    top: -4px;
+}
+
+.programs__icon_pro {
+    left: 50%;
+    margin-left: -34px;
+    margin-top: -14px;
+    top: 50%;
 }
 
 .programs__item-title {
     font-size: 24px;
     font-weight: normal;
     line-height: 37px;
+    margin: 0 0 0 20px;
     text-transform: uppercase;
 }
 
 .programs__item-text {
     .plain-text();
+
+    border-bottom: 1px solid @card-inner-separator-color;
+    margin: 0;
+    padding: 25px 0 21px;
+}
+
+.programs__link-icon {
+    margin-left: 12px;
+
+    &::before {
+        background-image: url('../img/right-arrow-long.svg');
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        height: 11px;
+        width: 24px;
+    }
+
+    &::after {
+        background-image: url('../img/right-arrow-verylong.svg');
+        background-repeat: no-repeat;
+        content: '';
+        display: none;
+        height: 11px;
+        width: 33px;
+    }
 }
 
 .programs__item-link {
+    align-items: center;
     color: @text-main;
+    display: flex;
     font-size: 16px;
     line-height: 16px;
+    margin-top: 19px;
     text-decoration: none;
     text-transform: uppercase;
+
+    &:hover {
+        .programs__link-icon::before {
+            display: none;
+        }
+
+        .programs__link-icon::after {
+            display: block;
+        }
+    }
+
+    &:focus,
+    &:active {
+        opacity: @button-text-active-opacity;
+    }
 }
 
 @media (min-width: @tablet) {
