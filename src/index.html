@@ -60,15 +60,31 @@
                 Интернет-магазин «Cat Energy» — главная страница
             </h1>
             <section class="products">
-                <h2 class="products__title main__title">
-                    Функциональное питание для котов
-                </h2>
-                <b class="products__promo-text">
-                    Занялся собой? Займись котом!
-                </b>
-                <a class="products__link button button_brand" href="#">
-                    <span class="products__link-text">Подобрать программу</span>
-                </a>
+                <div class="products__main-block">
+                    <h2 class="products__title main__title">
+                        Функциональное<br>питание для котов
+                    </h2>
+                    <b class="products__promo-text">
+                        Занялся собой? Займись котом!
+                    </b>
+                </div>
+                <div class="products__bottom-inner">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1140px)" srcset="img/webp/index-can-desktop.webp 1x, img/webp/index-can-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/index-can-tablet.webp 1x, img/webp/index-can-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="img/webp/index-can-mobile.webp 1x, img/webp/index-can-mobile@2x.webp 2x">
+                        <source media="(min-width: 1150px)" srcset="img/index-can-desktop.png 1x, img/webp/index-can-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/webp/index-can-tablet@2x.png 2x">
+                        <img alt="Cat Energy Курица 500 г"
+                            class="catalog__item-image"
+                            src="img/index-can-mobile.png"
+                            srcset="img/index-can-mobile@2x.png 2x"
+                        >
+                    </picture>
+                    <a class="products__link button button_brand" href="form.html">
+                        <span class="products__link-text">Подобрать программу</span>
+                    </a>
+                </div>
             </section>
             <section class="programs">
                 <h2 class="programs__title section-title visually-hidden">
