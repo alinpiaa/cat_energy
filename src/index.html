@@ -179,7 +179,7 @@
                 </p>
                 <ul class="demo__summary-list">
                     <li class="demo__summary-item">
-                        <span class="demo__summary-parameter">
+                        <span class="demo__summary-parameter demo__summary-parameter">
                         Снижение веса
                         </span>
                         <b class="demo__summary-value">5 кг</b>
@@ -199,17 +199,42 @@
                 </ul>
                 <div class="demo__slider slider">
                     <ul class="slider__list">
-                        <li class="slider__item">
-                            <img src="." alt="Пухлый кот.">
+                        <li class="slider__item slider__item_show">
+                            <picture>
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/before-desktop.webp 1x, img/webp/before-desktop@2x.webp 2x">
+                                <source type="image/webp" srcset="img/webp/before-mobile.webp 1x, img/webp/before-mobile@2x.webp 2x">
+                                <source media="(min-width: 768px)" srcset="img/before-desktop.png 1x, img/webp/before-desktop@2x.png 2x">
+                                <img alt="Пухлый кот."
+                                    class="slider__image"
+                                    src="img/before-mobile.png"
+                                    srcset="img/before-mobile@2x.png 2x"
+                                    >
+                            </picture>
                         </li>
                         <li class="slider__item">
-                            <img src="." alt="Стройный подтянутый кот.">
+                            <picture>
+                                <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/after-desktop.webp 1x, img/webp/after-desktop@2x.webp 2x">
+                                <source type="image/webp" srcset="img/webp/after-mobile.webp 1x, img/webp/after-mobile@2x.webp 2x">
+                                <source media="(min-width: 768px)" srcset="img/after-desktop.png 1x, img/webp/after-desktop@2x.png 2x">
+                                <img alt="Стройный подтянутый кот."
+                                    class="slider__image"
+                                    src="img/after-mobile.png"
+                                    srcset="img/after-mobile@2x.png 2x"
+                                    >
+                            </picture>
                         </li>
                     </ul>
-                    <div class="slider__toggle">
-                        Было
-                        <input class="demo__input-range" type="range" min="0" max="1" step="1">
-                        Стало
+                    <div class="slider__controls">
+                        <span class="slider__toggle-label slider__toggle-label_before">
+                            Было
+                        </span>
+                        <div class="slider__toggle">
+                            <span class="slider__toggle-icon slider__toggle-icon_before"></span>
+                        </div>
+                        <span class="slider__toggle-label slider__toggle-label_after">
+                            Стало            
+                        </span> 
+                        <input class="demo__input-range visually-hidden" type="range" min="0" max="1" step="1">    
                     </div>
                 </div>
             </section>
