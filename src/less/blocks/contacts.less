@@ -5,8 +5,41 @@
     text-transform: uppercase;
 }
 
+.contacts__text {
+    .inner();
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 26px;
+    padding-top: 29px;
+}
+
 .contacts__address {
     .plain-text();
+
+    margin: 0;
+}
+
+.contacts__map {
+    height: 362px;
+}
+
+.contacts__map_no-js {
+    position: relative;
+}
+
+.contacts__map-image {
+    display: block;
+    height: 362px;
+    object-fit: cover;
+}
+
+.contacts__map-pin {
+    left: 51%;
+    margin-left: -26px;
+    position: absolute;
+    top: 48px;
 }
 
 @media (min-width: @tablet) {
