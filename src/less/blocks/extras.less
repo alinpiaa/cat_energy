@@ -1,16 +1,52 @@
+.extras {
+    padding-top: 29px;
+}
+
 .extras__title {
     font-size: 24px;
     line-height: 24px;
+    margin: 0;
+    position: relative;
+}
+
+.extras__title-inner {
+    border-bottom: 1px solid @field-border-color;
+    margin: 0 20px;
+    padding-bottom: 31px;
+}
+
+.extras__title-icon {
+    background-color: @brand;
+    display: block;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    width: 53px;
 }
 
 .extras__list {
     .reset-list();
+    .inner();
+}
+
+.extras__item {
+    border-bottom: 1px solid @field-border-color;
+    padding: 10px 0 17px;
+}
+
+.extras__item-specs-table {
+    margin-bottom: 13px;
+    margin-left: -2px;
+    width: 100%;
 }
 
 .extras__item-specs-table th {
     font-size: 16px;
     font-weight: normal;
     line-height: 16px;
+    padding-bottom: 11px;
+    padding-left: 2px;
     text-transform: uppercase;
 }
 
@@ -19,15 +55,54 @@
 
     font-size: 14px;
     line-height: 14px;
+    padding: 0;
+
+    &:nth-child(2) {
+        text-align: right;
+        transform: translateX(4px);
+    }
 }
 
 .extras__order-all-promo {
+    .inner();
+
+    padding-bottom: 35px;
+    padding-top: 39px;
+}
+
+.extras__order-all-inner {
     .plain-text();
 
+    align-items: center;
     background-color: @brand;
+    background-image: url('../img/gift-photo-mobile.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
     color: @text-white;
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
+    height: 289px;
+    justify-content: space-between;
     line-height: 20px;
+    padding: 64px 0 46px;
+}
+
+.extras__order-all-text {
+    margin: 0;
+    text-align: center;
+}
+
+.extras__order-all-icon {
+    fill: @text-white;
+}
+
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .extras__order-all-inner {
+        background-image: url('../img/gift-photo-mobile@2x.jpg');
+    }
 }
 
 @media (min-width: @tablet) {
