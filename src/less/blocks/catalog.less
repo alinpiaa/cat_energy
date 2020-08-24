@@ -92,13 +92,103 @@
 }
 
 @media (min-width: @tablet) {
+    .catalog {
+        padding-top: 57px;
+    }
+
+    .catalog__title {
+        margin-bottom: 165px;
+        margin-left: -3px;
+        padding-bottom: 0;
+    }
+
+    .catalog__list {
+        .inner();
+
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 768px;
+    }
+
+    .catalog__item-text-wrapper {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+
+    .catalog__item {
+        align-items: center;
+        background-color: @gray-lightest;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 164px 37px 40px;
+        position: relative;
+        width: 324px;
+
+        &:not(:nth-last-of-type(-n+2)) {
+            margin-bottom: 140px;
+        }
+
+        &:nth-of-type(odd) {
+            margin-right: 60px;
+        }
+    }
+
+    .catalog__item-image {
+        left: 50%;
+        position: absolute;
+        top: 15%;
+        transform: translateX(-50%) translateY(-64%);
+    }
+
     .catalog__item-title {
         font-size: 20px;
         line-height: 20px;
+        margin: 0 0 20px;
+        padding: 0;
+        text-align: center;
+        width: 134px;
     }
 
     .catalog__item-specs-table {
+        border-collapse: collapse;
         font-size: 16px;
         line-height: 16px;
+
+        td {
+            border-bottom: 1px solid @field-border-color;
+            padding: 7.5px 0;
+        }
+    }
+
+    .catalog__item-order-link {
+        margin-top: 33px;
+    }
+
+    .catalog__item_show-all {
+        background-color: transparent;
+        border: 1px solid @menu-item-border-color;
+        padding-top: 54px;
+
+        .catalog__item-title {
+            margin-top: 49px;
+        }
+
+        .catalog__item-text {
+            margin-bottom: 85px;
+            margin-top: 25px;
+            text-align: center;
+            width: 172px;
+        }
+    }
+
+    .catalog__item-icon {
+        height: 65px;
+        width: 60px;
     }
 }
