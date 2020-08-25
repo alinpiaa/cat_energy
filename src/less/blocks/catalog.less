@@ -192,3 +192,40 @@
         width: 60px;
     }
 }
+
+@media (min-width: @desktop) {
+    .catalog__item {
+        width: 245px;
+
+        &:nth-of-type(odd) {
+            margin: 0;
+        }
+
+        &:not(:nth-last-of-type(-n+2)) {
+            margin: 0;
+        }
+
+        &:not(:nth-last-of-type(-n+4)) {
+            margin-bottom: 142px;
+        }
+
+        &:not(:nth-of-type(4n)) {
+            margin-right: 80px;
+        }
+    }
+
+    .catalog__list {
+        max-width: 1220px;
+        padding: 0;
+    }
+
+    .catalog__item-icon {
+        height: 60px;
+    }
+
+    .catalog__item_show-all {
+        .catalog__item-text {
+            line-height: 19px;
+        }
+    }
+}

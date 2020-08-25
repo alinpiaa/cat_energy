@@ -189,3 +189,91 @@
         }
     }
 }
+
+@media (min-width: @desktop) {
+    .extras {
+        margin-bottom: 86px;
+        padding-top: 78px;
+    }
+
+    .extras__title-inner {
+        .inner();
+    }
+
+    .extras__list {
+        flex-shrink: 0;
+        margin: 0 80px 0 0;
+        padding: 0;
+        width: 895px;
+    }
+
+    .extras__content-wrapper {
+        .inner();
+
+        display: flex;
+        margin-top: 80px;
+    }
+
+    .extras__order-all-promo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .extras__order-all-inner {
+        background-image: url('../img/gift-photo-desktop.jpg');
+        display: flex;
+        flex-direction: column;
+        height: 285px;
+        padding: 65px 0 43px;
+        width: 245px;
+    }
+
+    .extras__order-all-text {
+        text-align: center;
+    }
+
+    .extras__item {
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid @field-border-color;
+        display: flex;
+        padding: 15px 0;
+
+        &:last-of-type {
+            border-bottom: 1px solid @field-border-color;
+        }
+    }
+
+    .extras__item-specs-table {
+        align-items: center;
+        display: flex;
+        margin-bottom: 0;
+
+        tbody {
+            padding-top: 5px;
+        }
+
+        tr {
+            display: flex;
+        }
+
+        td:first-child {
+            margin-right: 0;
+            text-align: left;
+            width: 243px;
+        }
+
+        td:nth-child(2) {
+            display: block;
+            margin-right: 40px;
+            transform: translateX(0);
+        }
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        .extras__order-all-inner {
+            background-image: url('../img/gift-photo-desktop@2x.jpg');
+        }
+    }
+}
